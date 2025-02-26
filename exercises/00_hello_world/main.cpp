@@ -6,6 +6,10 @@
 
 int main(int argc, char **argv) {
     // TODO: 在控制台输出 "Hello, InfiniTensor!" 并换行
-    std::cout : "Hello, InfiniTensor!" + std::endl;
+    // << 输出操作符, >> 输入操作符
+    // stdin 标准输入, stdout标准输出, stderr 标准错误流
+    // std::cout << "enter n: "
+    // std::cin >> n
+    std::cout<< "Hello, InfiniTensor!" << std::endl;
     return 0;
 }

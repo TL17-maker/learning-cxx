@@ -15,10 +15,19 @@ class Fibonacci {
 public:
     // TODO: 实现构造器
     // Fibonacci()
+    Fibonacci() : cache{0,1}, cached(2){
+        // 数组不能直接赋值要使用初始化列表或逐个元素赋值
+    }
+
+    Fibonacci(int i){
+        cache[0] = 1;
+        cache[1] = 2;
+        cached = 2;
+    }
 
     // TODO: 实现正确的缓存优化斐波那契计算
     size_t get(int i) {
-        for (; false; ++cached) {
+        for (; i>=cached; ++cached) {
             cache[cached] = cache[cached - 1] + cache[cached - 2];
         }
         return cache[i];

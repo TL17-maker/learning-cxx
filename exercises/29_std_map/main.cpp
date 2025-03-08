@@ -9,7 +9,7 @@ bool key_exists(std::map<k, v> const &map, k const &key) {
     // TODO: 实现函数
     // map.find的返回值类型是std::map<k, v>::iterator和std::map<k, v>::const_iterator
     // 常量map返回const_iterator
-    auto val = map.find(key);
+    typename std::map<k, v>::const_iterator val = map.find(key);
     if(val!=map.end()) return true;
     return false;
 }
